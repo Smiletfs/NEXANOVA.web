@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXANOVA - Future of Online Shopping</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'nexanova-black': '#121212',
+                        'nexanova-white': '#FFFFFF',
+                        'nexanova-gray': '#888888'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-border {
+            position: relative;
+            overflow: hidden;
+        }
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, #888, transparent);
+            animation: rotate 5s linear infinite;
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body class="bg-nexanova-black text-nexanova-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <div class="text-2xl font-bold tracking-tight">NEXANOVA</div>
+            <div class="space-x-6">
+                <a href="#" class="hover:text-nexanova-gray transition-colors">Shop</a>
+                <a href="#" class="hover:text-nexanova-gray transition-colors">Sell</a>
+                <a href="#" class="hover:text-nexanova-gray transition-colors">About</a>
+                <a href="#" class="bg-white text-black px-4 py-2 rounded-full hover:bg-nexanova-gray transition-colors">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="min-h-screen flex items-center justify-center text-center relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <h1 class="text-6xl font-bold mb-6 tracking-tight">
+                Redefining Online Commerce
+            </h1>
+            <p class="text-xl mb-10 max-w-2xl mx-auto text-nexanova-gray">
+                NEXANOVA offers a seamless platform for buying and selling, combining elegant design with cutting-edge technology and unparalleled user experience.
+            </p>
+            <div class="space-x-4">
+                <a href="#" class="inline-block bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-nexanova-gray transition-colors">
+                    Start Shopping
+                </a>
+                <a href="#" class="inline-block border border-white px-8 py-3 rounded-full hover:bg-white/10 transition-colors">
+                    Become a Seller
+                </a>
+            </div>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-br from-black via-nexanova-black to-black opacity-80"></div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="py-24 bg-black/50">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-black/30 p-6 rounded-xl border border-white/10 gradient-border">
+                    <div class="text-4xl mb-4">🔒</div>
+                    <h3 class="text-xl font-semibold mb-4">Secure Transactions</h3>
+                    <p class="text-nexanova-gray">
+                        Advanced security measures protect your data and ensure safe, transparent transactions.
+                    </p>
+                </div>
+                <div class="bg-black/30 p-6 rounded-xl border border-white/10 gradient-border">
+                    <div class="text-4xl mb-4">🌍</div>
+                    <h3 class="text-xl font-semibold mb-4">Sustainable Commerce</h3>
+                    <p class="text-nexanova-gray">
+                        We prioritize eco-friendly products and ethical brands to make a positive impact.
+                    </p>
+                </div>
+                <div class="bg-black/30 p-6 rounded-xl border border-white/10 gradient-border">
+                    <div class="text-4xl mb-4">🚀</div>
+                    <h3 class="text-xl font-semibold mb-4">Diverse Product Range</h3>
+                    <p class="text-nexanova-gray">
+                        From electronics to fashion, find everything you need in one sophisticated platform.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-24 bg-black/20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12">What Our Users Say</h2>
+            <div class="max-w-3xl mx-auto">
+                <blockquote class="text-2xl italic mb-8 text-nexanova-gray">
+                    "NEXANOVA has transformed my online shopping experience. The sleek design, extensive product range, and commitment to quality are unmatched."
+                </blockquote>
+                <div class="font-semibold">— Sarah Johnson, Digital Entrepreneur</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center border-b border-white/10 pb-8 mb-8">
+                <div class="text-2xl font-bold">NEXANOVA</div>
+                <div class="space-x-4">
+                    <a href="#" class="hover:text-nexanova-gray">Privacy Policy</a>
+                    <a href="#" class="hover:text-nexanova-gray">Terms of Service</a>
+                    <a href="#" class="hover:text-nexanova-gray">Contact</a>
+                </div>
+            </div>
+            <div class="text-center text-nexanova-gray">
+                © 2024 NEXANOVA. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scroll-based animation
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            const scrollPosition = window.scrollY;
+            header.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+        });
+
+        // Mobile menu toggle (you can expand this for full responsiveness)
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuToggle && mobileMenu) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
